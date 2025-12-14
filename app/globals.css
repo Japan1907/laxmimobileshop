@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 30, 41, 59;
+  --background-rgb: 255, 255, 255;
+  --background-secondary: 248, 250, 252;
+  --midnight-blue: 15, 23, 42;
+  --midnight-blue-light: 30, 41, 59;
+  --satin-gold: 202, 138, 4;
+  --satin-gold-light: 217, 119, 6;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .brand-logo-desaturate {
+    filter: grayscale(100%) opacity(0.7);
+    transition: filter 0.3s ease;
+  }
+  
+  .brand-logo-desaturate:hover {
+    filter: grayscale(0%) opacity(1);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--midnight-blue));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--satin-gold));
+}
+
+/* Selection color */
+::selection {
+  background: rgba(202, 138, 4, 0.2);
+  color: rgb(var(--foreground-rgb));
+}
