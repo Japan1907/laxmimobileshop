@@ -158,7 +158,7 @@ const mobileBrands = [
       </section>
 
       {/* Premium Mobile Devices Section */}
-      <section id="brands" className="py-16 lg:py-24 bg-white">
+   { /*  <section id="brands" className="py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4">
@@ -192,7 +192,41 @@ className="bg-white rounded-xl shadow-md p-6 lg:p-8 flex flex-col items-center j
           </div>
         </div>
       </section>
+*/}
+ <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4">
+                Premium Mobile Devices
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Authentic smartphones from the world's leading manufacturers
+            </p>
+          </div>
 
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
+            {mobileBrands.map((brand) => (
+              <div 
+                key={brand.name}
+                className="bg-white rounded-xl shadow-md p-6 lg:p-8 flex flex-col items-center justify-center border border-gray-100"
+
+              >
+                <div className="relative w-20 h-20 lg:w-24 lg:h-24 mb-4 ">
+                  <Image
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-sm font-bold text-gray-700 text-center">
+                  {brand.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Essential Accessories & Wearables Section */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
