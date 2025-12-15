@@ -21,7 +21,7 @@ export default function Home() {
       )
     },
     { 
-      value: '500+', 
+      value: '1000+', 
       label: 'Happy Customers',
       description: 'And growing',
       icon: (
@@ -115,7 +115,7 @@ const mobileBrands = [
             {/* Right - Image */}
             <div className="relative h-[400px] lg:h-[500px]">
               <Image
-                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80"
+                src="/Media.jpg"
                 alt="Premium mobile phones display"
                 fill
                 className="object-cover rounded-2xl shadow-2xl"
@@ -173,9 +173,10 @@ const mobileBrands = [
             {mobileBrands.map((brand) => (
               <div 
                 key={brand.name}
-                className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-4 lg:p-6 flex flex-col items-center justify-center border border-gray-100 hover:border-amber-500"
+className="bg-white rounded-xl shadow-md p-6 lg:p-8 flex flex-col items-center justify-center border border-gray-100"
+
               >
-                <div className="relative w-16 h-16 lg:w-20 lg:h-20 mb-3 brand-logo-desaturate">
+                <div className="relative w-16 h-16 lg:w-20 lg:h-20 mb-3 ">
                   <Image
                     src={brand.logo}
                     alt={`${brand.name} logo`}
@@ -208,9 +209,10 @@ const mobileBrands = [
             {accessoryBrands.map((brand) => (
               <div 
                 key={brand.name}
-                className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 lg:p-8 flex flex-col items-center justify-center border border-gray-100 hover:border-amber-500"
+                className="bg-white rounded-xl shadow-md p-6 lg:p-8 flex flex-col items-center justify-center border border-gray-100"
+
               >
-                <div className="relative w-20 h-20 lg:w-24 lg:h-24 mb-4 brand-logo-desaturate">
+                <div className="relative w-20 h-20 lg:w-24 lg:h-24 mb-4 ">
                   <Image
                     src={brand.logo}
                     alt={`${brand.name} logo`}
